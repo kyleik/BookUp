@@ -11,7 +11,7 @@ def connect():
 def insert_book(title, author, isbn):
     conn = sqlite3.connect("bookup.db")
     cur = conn.cursor()
-    cur.execute("INSERT INTO book VALUES (NULL,?,?,?,?)",(title, author, isbn))
+    cur.execute("INSERT INTO book VALUES (NULL,?,?,?,?)", (title, author, isbn))
     conn.commit()
     conn.close()
 
